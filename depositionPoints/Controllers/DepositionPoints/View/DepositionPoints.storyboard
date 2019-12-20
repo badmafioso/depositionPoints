@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Deposition Points View Controller-->
+        <scene sceneID="eGG-GL-GNp">
+            <objects>
+                <viewController storyboardIdentifier="DepositionPoints" id="eLN-xL-8St" customClass="DepositionPointsViewController" customModule="depositionPoints" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K6c-nT-hEM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iga-2l-uPI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xs-ZJ-IeC">
+                                <rect key="frame" x="309" y="408" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="I8W-e4-iMS"/>
+                                    <constraint firstAttribute="height" constant="50" id="fgM-il-3Lz"/>
+                                </constraints>
+                                <state key="normal" image="zoom-in-icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yaa-ww-1CM">
+                                <rect key="frame" x="309" y="484" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="9F8-xe-tZZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="T5S-Qa-dcy"/>
+                                </constraints>
+                                <state key="normal" image="zoom-out-icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXD-w3-p6h">
+                                <rect key="frame" x="309" y="560" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Tqf-Hs-lYJ"/>
+                                    <constraint firstAttribute="width" constant="50" id="k8M-TJ-tFM"/>
+                                </constraints>
+                                <state key="normal" image="marker-icon"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iga-2l-uPI" firstAttribute="bottom" secondItem="ReO-v7-FfP" secondAttribute="bottom" id="2lL-wT-VJE"/>
+                            <constraint firstItem="ReO-v7-FfP" firstAttribute="trailing" secondItem="ZXD-w3-p6h" secondAttribute="trailing" constant="16" id="7f3-vY-NDr"/>
+                            <constraint firstItem="ZXD-w3-p6h" firstAttribute="top" secondItem="Yaa-ww-1CM" secondAttribute="bottom" constant="26" id="EfA-e4-CVe"/>
+                            <constraint firstItem="iga-2l-uPI" firstAttribute="trailing" secondItem="ReO-v7-FfP" secondAttribute="trailing" id="Rj0-H0-bLP"/>
+                            <constraint firstItem="ReO-v7-FfP" firstAttribute="trailing" secondItem="2Xs-ZJ-IeC" secondAttribute="trailing" constant="16" id="SEN-CK-INV"/>
+                            <constraint firstItem="ReO-v7-FfP" firstAttribute="bottom" secondItem="ZXD-w3-p6h" secondAttribute="bottom" constant="57" id="pe3-N7-eaq"/>
+                            <constraint firstItem="iga-2l-uPI" firstAttribute="leading" secondItem="ReO-v7-FfP" secondAttribute="leading" id="rSJ-43-Urv"/>
+                            <constraint firstItem="ReO-v7-FfP" firstAttribute="trailing" secondItem="Yaa-ww-1CM" secondAttribute="trailing" constant="16" id="uUd-Rd-Jx2"/>
+                            <constraint firstItem="iga-2l-uPI" firstAttribute="top" secondItem="ReO-v7-FfP" secondAttribute="top" id="wsV-6F-pSQ"/>
+                            <constraint firstItem="Yaa-ww-1CM" firstAttribute="top" secondItem="2Xs-ZJ-IeC" secondAttribute="bottom" constant="26" id="z2y-Jg-N16"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ReO-v7-FfP"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="iga-2l-uPI" id="BZ8-4v-ech"/>
+                        <outlet property="myLocationButton" destination="ZXD-w3-p6h" id="OqM-ik-p4N"/>
+                        <outlet property="zoomInButton" destination="2Xs-ZJ-IeC" id="Brh-WI-kOf"/>
+                        <outlet property="zoomOutButton" destination="Yaa-ww-1CM" id="DF7-fu-KSy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epj-Rz-Y12" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48.799999999999997" y="94.902548725637189"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="marker-icon" width="50" height="50"/>
+        <image name="zoom-in-icon" width="50" height="50"/>
+        <image name="zoom-out-icon" width="50" height="50"/>
+    </resources>
+</document>

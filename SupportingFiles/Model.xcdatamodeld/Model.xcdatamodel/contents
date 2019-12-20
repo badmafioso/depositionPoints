@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DepositionImages" representedClassName="DepositionImages" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="imageName" optional="YES" attributeType="String"/>
+        <attribute name="lastModifiedDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="partnerName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DepositionPartners" representedClassName="DepositionPartners" syncable="YES">
+        <attribute name="depositionDuration" optional="YES" attributeType="String"/>
+        <attribute name="hasLocations" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isMomentary" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="limitations" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="partnerDescription" optional="YES" attributeType="String"/>
+        <attribute name="picture" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DepositionPoints" representedClassName="DepositionPoints" syncable="YES">
+        <attribute name="addressInfo" optional="YES" attributeType="String"/>
+        <attribute name="fullAddress" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="partnerName" optional="YES" attributeType="String"/>
+        <attribute name="phones" optional="YES" attributeType="String"/>
+        <attribute name="workHours" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="DepositionImages" positionX="45" positionY="72" width="128" height="103"/>
+        <element name="DepositionPartners" positionX="116.015625" positionY="-6.1328125" width="128" height="178"/>
+        <element name="DepositionPoints" positionX="-63" positionY="-18" width="128" height="148"/>
+    </elements>
+</model>
